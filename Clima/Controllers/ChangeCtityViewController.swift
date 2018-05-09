@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ChangeCtityViewController.swift
 //  Clima
 //
 //  Created by Tran Thanh Bang on 2018/05/09.
@@ -8,18 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChangeCtityViewController: UIViewController {
 
+    @IBOutlet weak var cityTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func onClickToGetWeatherOfCity(_ sender: UIButton) {
+    }
+    
+    @IBAction func onClickBack(_ sender: UIButton) {
+    }
 }
-
