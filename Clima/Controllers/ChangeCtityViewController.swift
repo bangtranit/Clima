@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol ChangeCityDelegate {
+    func userEnteredNameCity(cityName : String)
+}
+
 class ChangeCtityViewController: UIViewController {
 
     @IBOutlet weak var cityTextField: UITextField!
+    var delegate : ChangeCityDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,8 +28,11 @@ class ChangeCtityViewController: UIViewController {
     }
     
     @IBAction func onClickToGetWeatherOfCity(_ sender: UIButton) {
+        delegate?.userEnteredNameCity(cityName: cityTextField.text!)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onClickBack(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
